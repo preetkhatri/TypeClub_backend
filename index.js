@@ -28,7 +28,7 @@ app.post('/submit-score', async (req, res) => {
     try {
         const { name, score } = req.body;
 
-        if (!name || !score) {
+        if (!name) {
             return res.status(400).json({ error: "Name is required" });
         }
 
